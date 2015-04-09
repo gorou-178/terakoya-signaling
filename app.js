@@ -1,8 +1,7 @@
 /**
  * Created by gurimmer on 2014/10/13.
  */
-var port = 5000;
-var io = require('socket.io').listen(port);
+var io = require('socket.io').listen(process.env.PORT || port);
 console.log((new Date()) + " Server is listening on port " + port);
 
 io.sockets.on('connection', function(socket) {
